@@ -27,6 +27,7 @@
 //  const ids = Symbol('123')
 //  console.log(id)
 //  console.log(ids)
+//  console.log(id === ids) // false (symbols are always unique)
 
  //typeof : used to check type of the var 
  console.log(typeof(b))     //undefined 
