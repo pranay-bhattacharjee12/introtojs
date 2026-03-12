@@ -17,18 +17,20 @@ function one (){
         const mail ="axb@gmail.com"
         console.log(`printin from inside two ${name}`)
     }
-    // console.log(mail);  //printyou error due to block scope access
+    // console.log(mail);  //error due to block scope access
     two();
 }
 one();
 
+// Hoisting- > where variable and function declarations are moved to the top of their scope 
+// during the compilation phase, before the code executes.
 console.log(addone(10));
 
 function addone(a){
     return a+1;
 }
 
-//console.log(addtwo(10));   //error due scope
+//console.log(addtwo(10));   //error due scope(hoisting / temporal dead zone)
 
 //function expression
 const addtwo = function(b){

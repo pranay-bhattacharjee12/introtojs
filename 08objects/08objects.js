@@ -1,10 +1,17 @@
-// singelton 
-// Object.create
+// singleton object create by Object.create
+const user = Object.create(null);
 
-//decllear symbol
+user.name = "Ramesh Das";
+user.age = 25;
+user.location = "Agra";
+
+console.log(user);
+console.log(user.name);
+
+//declare symbol
 const sym =Symbol("key1")
 
-//object literals
+//object literal
 const obj ={
     naam : "rmesh das",
     [sym] : "key1",
@@ -15,7 +22,10 @@ const obj ={
 
 console.log(typeof(obj[sym]))
 console.log(obj)
+console.log(obj.sym)      // undefined cnot access symbol property using dot notation
+console.log(obj[sym])    // accessing symbol property -> key1
 
-//destraucturing
+
+//destructuring
 const {naam, loc} = obj;    
 console.log(`naam is ${naam} from ${loc}`)

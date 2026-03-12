@@ -68,7 +68,8 @@ switch (day) {
 //Falsy -> false, 0, -0, "", null, undefined, NaN
 //truthy -> "0", 'false', [], {}, function(){}, true, 1, -1
 
-//Nullish coalescing operator (??) - returns the right-hand operand when the left-hand operand is null or undefined, otherwise returns the left-hand operand.
+//Nullish coalescing operator (??) - returns the right-hand operand 
+// when the left-hand operand is null or undefined, otherwise returns the left-hand operand.
 let val = null ?? 20;
 console.log(val)
 

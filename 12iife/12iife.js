@@ -1,6 +1,6 @@
-// Imediately Invoked Function Expressions(IIFE)
+// Immediately Invoked Function Expressions(IIFE)
 
-//sometimes w have problem related to global scope pollution so for remove that we use IIFE
+//sometimes we have problem related to global scope pollution so for remove that we use IIFE
 
 //named IIFE
 (function greet(){
