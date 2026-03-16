@@ -15,14 +15,16 @@ const numbers = [1, 2, 3, 4, 5];
 //filter() method creates a new array with all elements that pass the test implemented by the provided function.
 const result = numbers.filter((num) => {
     return num > 2;
-})  //if you didnot start scope({}) then it will normally return without return keyword otherwise you have to use return keyword msut be used when you have scope({}) in arrow function
+})  //if you didnot start scope({}) then it will normally return without return keyword 
+//otherwise you have to use return keyword msut be used when you have scope({}) in arrow function
 console.log(result); // [3, 4, 5]
 
 const historyBooks = books.filter((bk) => bk.genre === "History")
 console.log(historyBooks);
 
 
-//map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+//map() method creates a new array populated with the results of calling a provided function 
+// on every element in the calling array.
 const result2 = numbers.map((num) => num + 10)
 console.log(result2); // [11, 12, 13, 14, 15]
 
@@ -33,7 +35,8 @@ const result3 = numbers
 console.log(result3);
 
 
-//reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+//reduce() method executes a reducer function (that you provide) on each element of the array, 
+// resulting in a single output value.
 const myTotal = numbers.reduce(function (acc, currval) {
     console.log(`acc: ${acc} and currval: ${currval}`);
     return acc + currval
