@@ -39,7 +39,7 @@ const promiseTwo = new Promise(function(resolve, reject){
 
 
 //Async Await
-const promiseThree = new Promise ( (resolve, reject) => {
+const promiseThree = new Promise((resolve, reject) => {
     setTimeout(() => {
         let error = true
         if (!error) {
@@ -47,16 +47,16 @@ const promiseThree = new Promise ( (resolve, reject) => {
         } else {
             reject('ERROR: JS went wrong')
         }
-    })
+    }, 1000) // ✅ added delay
 })
 
 async function consumePromiseThree() {
-    try {                              //if everything ok then then try will execute 
-        console.log(response);             
-    } catch (error) {                  //otherwise catch will handle the error
-        const response = await promiseThree
-        console.log(error);
+    try {
+        const response = await promiseThree   // ✅ await inside try
+        console.log(response);
+    } catch (error) {
+        console.log(error);   // ✅ handle rejection here
     }
 }
 
-consumePromiseThree();        //to consume the promise we have to call the function which is consuming the promise
+consumePromiseThree();
